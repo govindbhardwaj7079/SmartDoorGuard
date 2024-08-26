@@ -1,32 +1,5 @@
 # Facial-recognition-home-door-lock-system
-Made Face recognition door lock with Raspberry Pi and other sensor.  
-This repo contains all code require to make your own face recognition door lock system.  
-
-# Raspberry Pi
-“The Raspberry Pi is a low cost, credit-card sized computer that plugs into a computer
-monitor or TV, and uses a standard keyboard and mouse. It is a capable little
-device that enables people of all ages to explore computing, and to learn how to
-program in languages like Scratch and Python.”    — Raspberry Pi foundation
-
-* Raspberry Pi is great learning tool.
-* You can built many cool project using Pi.
-
-# Prerequisites 
-* I assuming that you have little bit of knowledge and work experience with python programming language and raspberry pi as well.
-* If you not familiar with pi, i attaching link of some resources which i using.
-    * https://www.pyimagesearch.com/ 
-    * https://www.youtube.com/watch?v=RpseX2ylEuw
-* If you want to know about face Recognition and how it works check below video playlist.  
-    * https://www.youtube.com/watch?v=-FfMVnwXrZ0&t=25s
-
-# My Contact Detail
-If you have any doubts feel free to ask any quesion at any time:)  
-  * LinkedIn:  https://www.linkedin.com/in/ravirajsinh45/  
-  * Twitter:   https://twitter.com/Ravirajsinh45  
-  * Instagram: https://www.instagram.com/ravirajsinh45/ 
-
-
-    
+Made Face recognition door lock with Raspberry Pi and Camera and Ultra Sonic(3 pin) sensor.  
 
 # Step by step description of this project
 
@@ -69,20 +42,6 @@ If you bought raspberry pi with pre install NOOBs sd card you are ready to go bu
 *  Now extract downloaded zip file and go inside extracted folder.
 * Copy all files of folder and paste in sd card.
 
-There are several ways to work with pi two of them is here.  
-1. Using with TV or desktop
-2. Connect Pi with your PC or Laptop using Ethernet cable
-
-
-    ### 1. Using with TV or desktop
-    * If you have HDMI compatible Desktop or tv, USB key board and mouse you connect with each other and  give power supply to pi.
-    * You will get screen like this    
-    ![](https://github.com/ravirajsinh45/Face-recognition-home-door-lock-system/blob/master/assets/noobs.png)
-    * There will be few option for installtion, we only need **Raspbian** to install. select Raspbian and press install it took while to get install.
-    * After installtion configure your time zone and reboot the pi and you ready to rock :)
-
-    ### 2. Connect Pi with your PC or Laptop using Ethernet cable
-    Update soon ...
 
 
 ## Installation
@@ -133,7 +92,7 @@ GPIO Pin Diagram
 In Pi there are 40 GPIO pins.
 
 ### 1. Camera
-![](https://github.com/ravirajsinh45/Face-recognition-home-door-lock-system/blob/master/assets/camera_module.jpeg)  
+![](https://github.com/govindbhardwaj7079/Face-recognition-home-door-lock-system/blob/master/assets/camera_module.jpeg)  
 
 The camera module is a small circuit board, with a strip of ribbon cable that plugs directly into the Raspberry Pi board. It’s easiest to connect the camera before you plug your Raspberry Pi into any cables.
 * Open the camera connector on your Raspberry Pi board which is in between hdmi and audio port, hold the ends between your finger and thumb and gently lift. 
@@ -203,7 +162,7 @@ The relay module has total of six pins: three on one side and three on other sid
   ```
 * After that clone the repo
   ```
-  git clone https://github.com/ravirajsinh45/Face-recognition-home-door-lock-system.git
+  git clone https://github.com/govindbhardwaj7079/Face-recognition-home-door-lock-system.git
   ```
   and go inside clone repo.
   ```
@@ -221,7 +180,7 @@ NOTE: MAKE SURE PHOTO YOU ADDED IT ONLY HAVE ONE PERSON INSIDE AND THAT FOLDER S
 * This will generate face_encodings.pickle file which contains encoded value of all photos.
 * Now open **final.py** file and go to 75th line of code their will be code like below
     ```
-    if match == 'Ravirajsinh': #In Your case whatever your name
+    if match == 'govindbhardwaj': 
                         
         '''
         Here we using solenoid lock to for lock-unlock the door,
@@ -232,17 +191,12 @@ NOTE: MAKE SURE PHOTO YOU ADDED IT ONLY HAVE ONE PERSON INSIDE AND THAT FOLDER S
         lock(26)
         GPIO.cleanup(26)
     ```
-* Now change 'Ravirajsinh' With your name or whatever person that you want recognize and want to door to open whenever he or she comes.
-* (Optional) If you connect relay module on other pin than 26, change it as well.
+* Now change 'GovindBhardwaj' With your name or whatever person that you want recognize and want to door to open whenever he or she comes.
 * Now we have all things ready to run our system. So run below code .....
     ```
     python3 final.py
     ```
-* If you done exact things that I tell you above, camera screen pop up on your display and if accesable person detected in camera image, door will unlock. wooooh,Hurrah:)
 
-* If you want to close program hit CTRL+C from your keyboard.
-
-# Thank You:)
 
 
 
